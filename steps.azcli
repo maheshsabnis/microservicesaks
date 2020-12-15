@@ -1,0 +1,64 @@
+# login on azure 
+az login
+
+# getting list of subscriptions
+az account list --output table
+
+# If you have multiple subscription then set the subscription
+az account set --subscription "Microsoft Azure Sponsorship"
+
+# make sure that you create docker images
+
+# create a resource group
+az group create -n msitresgp -l westus
+
+# create Azure Container Registry ACR
+az acr create -n msitacr -g msitresgp --admin-enabled false --sku Basic
+
+
+
+# store unique ACR id in ACR_ID
+ACR_ID=$(az acr show -n msitacr -g msitresgp --query id -o tsv)   
+
+#Push The Docker Image To ACR
+    - # re-tag the existing Docker Image
+            docker tag hello-aks:0.0.1 msitacr.azurecr.io/hello-aks:0.0.1
+# authenticate against ACR
+        az acr login -n msitacr
+ # push the docker image to ACR
+    docker push msitacr.azurecr.io/hello-aks:0.0.1
+# Create A Kubernetes Cluster
+    # create the AKS cluster
+        az aks create -n aks-demo \
+        -g hello-aks \
+        --enable-managed-identity \
+        --attach-acr $ACR_ID \
+        --node-count 1
+ # Install kubectl
+        az aks install-cli
+ # download cluster configuration for kubectl
+            az aks get-credentials \
+            -n aks-demo \
+            -g hello-aks
+
+# verify kubectl context
+            kubectl config get-contexts
+# prints all cluster contexts
+
+# if kubectl does not point to aks-demo, switch context
+        kubectl config use-context aks-demo
+
+# Create Kubernetes Deployment Manifests
+    pod.yml
+    service.yml
+# Deploy Your Application 
+    # deploy artifacts to AKS
+    - kubectl apply -f pod.yml
+    - kubectl apply -f service.yml
+# wait for service to receive its external IP
+    kubectl get svc -w
+
+# get pods
+ kubectl get pods
+# get endpoints 
+kubectl get endpoints          

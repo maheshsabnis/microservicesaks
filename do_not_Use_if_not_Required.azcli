@@ -1,0 +1,17 @@
+# creating Azure Service Principal 
+az ad sp create-for-rbac --name ServicePrincipalName
+
+# and the result is
+
+# {
+#   "appId": "95ee2cf0-81e4-4d6b-be98-7739b063791d",
+#   "displayName": "ServicePrincipalName",
+#   "name": "http://ServicePrincipalName",
+#   "password": "LEQ9f7sgGvRdun3~RH4nV9-z5DsN44wbZk",
+#   "tenant": "e4c947ee-8c95-4c81-97e5-d9400ddfcbbd"
+# }
+
+
+
+
+az aks create --resource-group msitresgp  --name msitacr --service-principal 95ee2cf0-81e4-4d6b-be98-7739b063791d --client-secret LEQ9f7sgGvRdun3~RH4nV9-z5DsN44wbZk --enable-managed-identity --attach-acr $ACR_ID --node-count 1 --generate-ssh-keys

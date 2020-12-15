@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azure-micro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myservicedemo1app
+  template:
+    metadata:
+      labels:
+        app: myservicedemo1app
+    spec:
+      containers:
+      - name: myservicedemo1app
+        image: msitacr.azurecr.io/myservicedemo1:001
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+        - containerPort: 6004
+        env:
+          - name: myservicedemo1app
+            value: myservicedemo1app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myservicedemo1app
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: myservicedemo1app
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myservicedemo2app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myservicedemo2app
+  template:
+    metadata:
+      labels:
+        app: myservicedemo2app
+    spec:
+      containers:
+      - name: myservicedemo2app
+        image: msitacr.azurecr.io/myservicedemo2:001
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+        - containerPort: 6005
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myservicedemo2app
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: myservicedemo2app

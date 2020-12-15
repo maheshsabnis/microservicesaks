@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xn7Cp7db7+ADjbD7XlrP7l2qa8VY90BwvTQ4I43RIJwk5HFxN2PykgQ5O1Pu+G0bKPSsX9WaOYmmcLQ7JoVMUQ==",
+  "success": true,
+  "projectFilePath": "/Users/maheshsabnis/Projects/Microservices/Training/MyServiceDemo2/MyServiceDemo2.csproj",
+  "expectedPackageFiles": [
+    "/Users/maheshsabnis/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/maheshsabnis/.nuget/packages/microsoft.openapi/1.1.4/microsoft.openapi.1.1.4.nupkg.sha512",
+    "/Users/maheshsabnis/.nuget/packages/swashbuckle.aspnetcore/5.5.1/swashbuckle.aspnetcore.5.5.1.nupkg.sha512",
+    "/Users/maheshsabnis/.nuget/packages/swashbuckle.aspnetcore.swagger/5.5.1/swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
+    "/Users/maheshsabnis/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.5.1/swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",
+    "/Users/maheshsabnis/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.5.1/swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}
