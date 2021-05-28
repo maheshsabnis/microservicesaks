@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xn7Cp7db7+ADjbD7XlrP7l2qa8VY90BwvTQ4I43RIJwk5HFxN2PykgQ5O1Pu+G0bKPSsX9WaOYmmcLQ7JoVMUQ==",
+  "dgSpecHash": "C+a/iyG15otM+d6mE5upThUeOroX2lhKmtjfymJ3IHMgvfrS909Sqi3M6paOm5DmqhjsneDRLxJFCq3pLEhHnA==",
   "success": true,
-  "projectFilePath": "/Users/maheshsabnis/Projects/Microservices/Training/MyServiceDemo2/MyServiceDemo2.csproj",
+  "projectFilePath": "/Users/maheshsabnis/Projects/Microservices/Training/MultiServicesAKS/MyServiceDemo2/MyServiceDemo2.csproj",
   "expectedPackageFiles": [
     "/Users/maheshsabnis/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/maheshsabnis/.nuget/packages/microsoft.openapi/1.1.4/microsoft.openapi.1.1.4.nupkg.sha512",

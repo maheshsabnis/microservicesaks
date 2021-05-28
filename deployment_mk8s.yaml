@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myservicedemo1app
-        image: sgacr1001.azurecr.io/myservdemo1:0.0.1
+        image: mast007/serviceone:v1
         resources:
           requests:
             cpu: 100m
@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: myservicedemo2app
-        image: sgacr1001.azurecr.io/myservdemo2:0.0.1
+        image: mast007/servicetwo:v1
         resources:
           requests:
             cpu: 100m

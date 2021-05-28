@@ -199,11 +199,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/maheshsabnis/Projects/Microservices/Training/MyServiceDemo2/MyServiceDemo2.csproj",
+      "projectUniqueName": "/Users/maheshsabnis/Projects/Microservices/Training/MultiServicesAKS/MyServiceDemo2/MyServiceDemo2.csproj",
       "projectName": "MyServiceDemo2",
-      "projectPath": "/Users/maheshsabnis/Projects/Microservices/Training/MyServiceDemo2/MyServiceDemo2.csproj",
+      "projectPath": "/Users/maheshsabnis/Projects/Microservices/Training/MultiServicesAKS/MyServiceDemo2/MyServiceDemo2.csproj",
       "packagesPath": "/Users/maheshsabnis/.nuget/packages/",
-      "outputPath": "/Users/maheshsabnis/Projects/Microservices/Training/MyServiceDemo2/obj/",
+      "outputPath": "/Users/maheshsabnis/Projects/Microservices/Training/MultiServicesAKS/MyServiceDemo2/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -256,7 +256,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }
